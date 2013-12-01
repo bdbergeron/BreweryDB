@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AF2CAFDC-769C-486F-BF75-C95E16541E46</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Brews</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0666A6AA-D717-4CDF-9F12-EEBA64DA79F6</key>
+		<string>ssh://github.com/bdbergeron/BreweryDB.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS Demo/Brews.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0666A6AA-D717-4CDF-9F12-EEBA64DA79F6</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/bdbergeron/BreweryDB.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0666A6AA-D717-4CDF-9F12-EEBA64DA79F6</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0666A6AA-D717-4CDF-9F12-EEBA64DA79F6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BreweryDB</string>
+		</dict>
+	</array>
+</dict>
+</plist>
