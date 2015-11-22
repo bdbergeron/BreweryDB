@@ -298,7 +298,7 @@ NSString * const BreweryDBResponseDataKey   = @"data";
           type:(BreweryDBSearchType)type
 withBreweryInfo:(BOOL)withBreweryInfo
     parameters:(NSDictionary *)parameters
-       success:(void (^)(NSArray *))success
+       success:(void (^)(NSArray *, NSUInteger, NSUInteger))success
        failure:(void (^)(NSError *))failure
 {
     NSParameterAssert(queryString);
@@ -394,7 +394,9 @@ withBreweryInfo:(BOOL)withBreweryInfo
                                                                 else
                                                                     [searchResults addObject:resultDictionary];
                                                             }
-                                                            success(searchResults);
+                                                            NSUInteger  numberOfPages   = [response[BreweryDBResponseNumberOfPagesKey] unsignedIntegerValue];
+                                                            NSUInteger  currentPage     = [response[BreweryDBResponseCurrentPageKey] unsignedIntegerValue];
+                                                            success(searchResults, currentPage, numberOfPages);
                                                         }
                                                         else
                                                             failure([[[self class] sharedInstance] errorWithCode:BDB_ERRNO_API_ERROR
