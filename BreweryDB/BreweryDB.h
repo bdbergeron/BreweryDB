@@ -25,6 +25,7 @@
 #import "BDBBeer.h"
 #import "BDBBrewery.h"
 #import "BDBGuild.h"
+#import "BDBStyle.h"
 
 
 typedef NS_ENUM(NSInteger, BreweryDBSearchType)
@@ -130,5 +131,34 @@ withBreweryInfo:(BOOL)withBreweryInfo
     parameters:(NSDictionary *)parameters
        success:(void (^)(NSArray *results, NSUInteger currentPage, NSUInteger numberOfPages))success
        failure:(void (^)(NSError *error))failure;
+
+#pragma mark Styles
+/**
+ *  Fetch an array of styles pertaining to the specified parameters.
+ *
+ *  @param parameters Filtering paramaters.
+ *  @param success    Callback function performed on successful retrieval of results.
+ *  @param failure    Callback function performed when an error occurs.
+ *
+ *  @since 1.0.0
+ */
++ (void)fetchStylesWithParameters:(NSDictionary *)parameters
+                          success:(void (^)(NSArray *beers))success
+                          failure:(void (^)(NSError *error))failure;
+
+/**
+ *  Fetch a single style object specified by the styleId.
+ *
+ *  @param styleId    Unique ID describing the beer.
+ *  @param parameters Filtering parameters.
+ *  @param success    Callback function performed on successful retrieval of results.
+ *  @param failure    Callback function performed when an error occurs.
+ *
+ *  @since 1.0.0
+ */
++ (void)fetchStyleWithId:(NSString *)styleId
+              parameters:(NSDictionary *)parameters
+                 success:(void (^)(BDBBeer *beer))success
+                 failure:(void (^)(NSError *error))failure;
 
 @end

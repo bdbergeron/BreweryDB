@@ -22,6 +22,7 @@
 
 #import "BDBBeer.h"
 #import "BDBBrewery.h"
+#import "BDBStyle.h"
 
 
 #pragma mark -
@@ -60,7 +61,10 @@
         _glasswareId = dictionary[NSStringFromSelector(@selector(glasswareId))];
         _glass = dictionary[NSStringFromSelector(@selector(glass))];
         _styleId = dictionary[NSStringFromSelector(@selector(styleId))];
-        _style = dictionary[NSStringFromSelector(@selector(style))];
+
+        NSDictionary* styleDictionary = dictionary[NSStringFromSelector(@selector(style))];
+        _style = [[BDBStyle alloc] initWithDictionary:styleDictionary];
+
         _organic = [dictionary[NSStringFromSelector(@selector(isOrganic))] boolValue];
         _labels = dictionary[NSStringFromSelector(@selector(labels))];
         _servingTemperature = dictionary[NSStringFromSelector(@selector(servingTemperature))];
