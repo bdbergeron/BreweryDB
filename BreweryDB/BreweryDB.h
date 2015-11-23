@@ -128,7 +128,7 @@ typedef NS_ENUM(NSInteger, BreweryDBSearchType)
           type:(BreweryDBSearchType)type
 withBreweryInfo:(BOOL)withBreweryInfo
     parameters:(NSDictionary *)parameters
-       success:(void (^)(NSArray *results))success
+       success:(void (^)(NSArray *results, NSUInteger currentPage, NSUInteger numberOfPages))success
        failure:(void (^)(NSError *error))failure;
 
 @end
