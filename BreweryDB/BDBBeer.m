@@ -38,7 +38,7 @@
 
     @try
     {
-        _beerId = dictionary[NSStringFromSelector(@selector(beerId))];
+        _beerId = dictionary[@"id"];
         _name = dictionary[NSStringFromSelector(@selector(name))];
         _descriptionString = [dictionary[@"description"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 
